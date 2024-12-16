@@ -137,12 +137,13 @@ const Main = () => {
 
 const About = () => {
   return (
-    <section id="about" className="my-12">
+    <section id="about" className="my-6">
       <h2 className="text-2xl font-bold mb-6 flex justify-center ">About Me</h2>
       <div className="flex flex-col md:flex-row items-center">
         <img src={profile_pic} alt="A professional headshot of John Doe" className="rounded-full mb-6 md:mb-0 md:mr-6 object-cover h-40 w-40" />
         <p className="text-lg leading-relaxed">
-          I am a Full Stack Developer with expertise in HTML, CSS, JavaScript, React.js, and Node.js. Currently interning at Prajnan Software Private Limited, I focus on developing responsive web applications and a SaaS-based inventory management system. I hold a Bachelor’s degree in Electrical and Electronics Engineering from REVA University, with a CGPA of 9.16/10.0. My technical skills encompass multiple programming languages and frameworks, and I am passionate about leveraging technology to enhance user experiences.        </p>
+          I am a Full Stack Developer skilled in HTML, CSS, JavaScript, React.js, Node.js, Express and MongoDB. Currently, I am interning at Prajnan Software Private Limited, where I am actively developing responsive web applications and contributing to a SaaS-based inventory management system. I hold a Bachelor’s degree in Electrical and Electronics Engineering from REVA University, with a CGPA of 9.16/10.0. My technical expertise spans various programming languages and frameworks, and I am passionate about leveraging technology to enhance user experiences.
+        </p>
       </div>
     </section>
   );
@@ -152,54 +153,76 @@ const Projects = () => {
   return (
     <section id="projects" className="my-12 ">
       <h2 className="text-2xl font-bold mb-6 flex justify-center">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <ProjectCard
-          title="jobs Dashboard"
-          description="A comprehensive dashboard for managing enterprise resources and analytics."
-          imageUrl={jobs}
-          imageAlt="Screenshot of the Enterprise Dashboard project"
-        />
-        <ProjectCard
-          title="E-commerce Platform"
-          description="A scalable e-commerce platform with advanced features and seamless user experience."
-          imageUrl={full_stack}
-          imageAlt="Screenshot of the E-commerce Platform project"
-        />
-        <ProjectCard
-          title="Pricing-Panel"
-          description="A social media application with real-time updates and interactive features."
-          imageUrl={price_panel}
-          imageAlt="Screenshot of the Social Media App project"
-        />
-        <ProjectCard
-          title="Portfolio Website"
-          description="A personal portfolio website showcasing my skills and projects."
-          imageUrl={portfolio}
-          imageAlt="Screenshot of the Portfolio Website project"
-        />
-        <ProjectCard
-          title="Museum of candy"
-          description="A modern blog platform with rich text editing and content management features."
-          imageUrl={MOC}
-          imageAlt="Screenshot of the Blog Platform project"
-        />
-        <ProjectCard
-          title="Todo_list using material ui"
-          description="A task management tool to help teams collaborate and manage their work efficiently."
-          imageUrl={todo}
-          imageAlt="Screenshot of the Task Management Tool project"
-        />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <a href="https://github.com/VRH7733/jobs" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="jobs Dashboard"
+            title2="Technologies used"
+            description="React, React Router, JSON-Server, Vite, Tailwind CSS, React Icons, React Toastify"
+            imageUrl={jobs}
+            imageAlt="Screenshot of the Enterprise Dashboard project"
+          />
+        </a>
+        <a href="https://github.com/VRH7733/full_stack_e-commerce" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="E-commerce Platform"
+            title2="Technologies used"
+            description="React, Node.js, Express, MongoDB, HTML, CSS, JavaScript, APIs, Vite, React Router"
+            imageUrl={full_stack}
+            imageAlt="Screenshot of the E-commerce Platform project"
+          />
+        </a>
+
+        <a href="https://github.com/VRH7733/Portfolio" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="Portfolio Website"
+            title2="Technologies used"
+            description="React, Vite, Tailwind CSS, Material-UI, EmailJS, JavaScript, PostCSS, ESLint, React Router."
+            imageUrl={portfolio}
+            imageAlt="Screenshot of the Portfolio Website project"
+          />
+        </a>
+        <a href="https://github.com/VRH7733/todoList" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="Todo_list using material ui"
+            title2="Technologies used"
+            description=" Material UI, JavaScript, HTML, CSS"
+            imageUrl={todo}
+            imageAlt="Screenshot of the Task Management Tool project"
+          />
+        </a>
+        <a href="https://github.com/VRH7733/Pricing-Panel" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="Pricing-Panel"
+            title2="Technologies used"
+            description="HTML, CSS, JavaScript"
+            imageUrl={price_panel}
+            imageAlt="Screenshot of the Social Media App project"
+          />
+        </a>
+
+        <a href="https://github.com/VRH7733/museum-of-candy-Bootstrap" target="_blank" rel="noopener noreferrer">
+          <ProjectCard
+            title="Museum of candy"
+            title2="Technologies used"
+            description="HTML, CSS, Bootstrap, JavaScript"
+            imageUrl={MOC}
+            imageAlt="Screenshot of the Blog Platform project"
+          />
+        </a>
+
       </div>
     </section>
   );
 };
 
-const ProjectCard = ({ title, description, imageUrl, imageAlt }) => {
+const ProjectCard = ({ title, title2, description, imageUrl, imageAlt }) => {
   return (
     <div className="bg-customgre rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105">
       <img src={imageUrl} alt={imageAlt} className="w-full h-64 object-fit" />
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-green-800">{title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-green-800 text-center">{title}</h3>
+        <p className="text-lg font-bold mb-2 text-green-800">{title2}</p>
         <p className="text-green-700">{description}</p>
       </div>
     </div>
@@ -232,7 +255,7 @@ const Contact = () => {
   return (
     <section id="contact" className="my-12">
       <h2 className="text-2xl font-bold mb-6 flex justify-center">Contact</h2>
-      <form ref={form} onSubmit={sendEmail} className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <form ref={form} onSubmit={sendEmail} className="max-w-lg mx-auto bg-sky-100 p-6 rounded-lg shadow-lg">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="user_name">Name</label>
           <input
