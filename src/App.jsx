@@ -91,13 +91,13 @@ const Header = () => {
       <div
         ref={dropdownRef}
         style={{ maxHeight: height }}
-        className={`sm:hidden bg-green-700 p-1 transition-max-height duration-500 ease-in-out overflow-hidden `}
+        className={`sm:hidden bg-green-700 p-1  transition-max-height duration-500 ease-in-out overflow-hidden `}
       >
-        <ul className="flex flex-col justify-self-center space-y-4 text-2xl">
+        <ul className="flex flex-col justify-self-center space-y-4 text-2xl pt-2">
           <li>
             <a
               href="#about"
-              className="hover:text-green-300 transition transform hover:-translate-y-1 duration-300 ease-in-out "
+              className="hover:text-green-300 transition transform hover:-translate-y-1 duration-300 ease-in-out p-2"
             >
               About
             </a>
