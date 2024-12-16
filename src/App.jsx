@@ -91,7 +91,7 @@ const Header = () => {
       <div
         ref={dropdownRef}
         style={{ maxHeight: height }}
-        className={`sm:hidden bg-green-700 p-2 transition-max-height duration-500 ease-in-out overflow-hidden `}
+        className={`sm:hidden bg-green-700 p-1 transition-max-height duration-500 ease-in-out overflow-hidden `}
       >
         <ul className="flex flex-col justify-self-center space-y-4 text-2xl">
           <li>
@@ -278,7 +278,7 @@ const Footer = () => {
     <footer className="bg-green-800 text-white p-6 mt-12">
       <div className="container mx-auto text-center">
         <p className="text-lg mb-4">&copy; 2024 V Raghavendra. All rights reserved.</p>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-8 mt-4 ">
+        <div className="flex flex-row justify-center items-center space-x-0 sm:space-x-8 mt-4 ">
           <a href="https://github.com/VRH7733" className="transition duration-300 hover:text-gray-300 hover:bg-gray-800 p-2 rounded hover:scale-125 mb-1 " target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />
           </a>
