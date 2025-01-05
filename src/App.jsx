@@ -308,9 +308,6 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/v-raghavendra1/" className="transition duration-300 hover:text-gray-300 hover:bg-blue-800 p-2 rounded hover:scale-125 mb-1 " target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} />
           </a>
-          <a href="https://x.com/vraghav97568187" className="transition duration-300 hover:text-gray-300 hover:bg-gray-800 p-2 rounded hover:scale-125 mb-1 " target="_blank" rel="noopener noreferrer">
-            <BsTwitterX size={30} />
-          </a>
           <a href="https://www.geeksforgeeks.org/user/raghavendra5iaf/" className="transition duration-300 hover:text-gray-300 hover:bg-green-600 p-2 rounded hover:scale-125 mb-1 " target="_blank" rel="noopener noreferrer">
             <SiGeeksforgeeks size={30} />
           </a>
